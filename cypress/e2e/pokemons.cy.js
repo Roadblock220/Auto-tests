@@ -7,8 +7,8 @@ describe('Покупка нового аватара для своего тре�
          cy.get('.auth__button').click(); // Нажал войти
          cy.get('.header__container > .header__id').click(); // зашел на сраничку своего тренера
          cy.get('[href="/shop"]').click(); // Перешел на страничку магазина
-         cy.get('.available > button').first().click({ force: true }); // Покупаю аватар
-         cy.get('.pay__payform-v2 > :nth-child(2) > .pay_base-input-v2').type('4620869113632996'); // Ввели номер карты
+         cy.get('.available > button').first().click({ force: true }); // Жму кнопку купить у доступного аватара
+         cy.get('.pay__payform-v2 > :nth-child(2) > .pay_base-input-v2').type('4620869113632996'); // Ввел номер карты на экране оплаты
          cy.get(':nth-child(1) > .pay_base-input-v2').type('1225'); // Ввел срок карты
          cy.get('.pay-inputs-box > :nth-child(2) > .pay_base-input-v2').type('125'); // Ввели CVV карты
          cy.get('.pay__input-box-last-of > .pay_base-input-v2').type('ruby rodd'); // Ввел имя владельца карты
